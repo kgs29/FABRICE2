@@ -1,0 +1,228 @@
+
+
+
+
+/* Footer */
+  .main-footer {
+    background-color: #1a202c;
+    color: #e2e8f0;
+  }
+
+  .footer-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+
+  .footer-col h4 {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+  }
+
+  .footer-col p {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .social-links a {
+    color: #e2e8f0;
+    font-size: 1.25rem;
+  }
+
+  .social-links a:hover {
+    color: #dd6b20;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-col li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-col a {
+    color: #e2e8f0;
+    font-size: 0.875rem;
+    text-decoration: none;
+  }
+
+  .footer-col a:hover {
+    color: #dd6b20;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    color: #1a202c;
+    outline: none;
+    border: none;
+  }
+
+  .newsletter-form input:focus {
+    box-shadow: 0 0 0 2px rgba(221, 107, 32, 0.5);
+  }
+
+  .newsletter-form button {
+    background-color: #dd6b20;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .newsletter-form button:hover {
+    background-color: #c05621;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #2d3748;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.75rem;
+    color: #a0aec0;
+  }
+
+  /* Responsive Design */
+  @media (min-width: 640px) {
+    .categories-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .products-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .suppliers-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .main-nav {
+      display: flex;
+    }
+
+    .menu-icon {
+      display: none;
+    }
+
+    .auth-buttons {
+      display: flex;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+    }
+
+    .hero-container {
+      flex-direction: row;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .hero-content {
+      text-align: left;
+      width: 50%;
+    }
+
+    .search-form {
+      margin: 0;
+    }
+
+    .categories-grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .products-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .suppliers-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .features-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .header-container {
+      padding: 0 2rem;
+    }
+
+    .hero-container {
+      padding: 3rem 2rem;
+    }
+
+    .categories-section,
+    .products-container,
+    .suppliers-section,
+    .features-section,
+    .footer-container {
+      padding: 3rem 2rem;
+    }
+  }
+
+
+
+/* Style pour la section des paiements */
+.payment-methods {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.payment-methods h5 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.payment-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.payment-icons i {
+  font-size: 24px;
+  color: #fff;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.payment-icons i:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.payment-icons .fa-cc-visa { color: #1a1f71; }
+.payment-icons .fa-cc-mastercard { color: #eb001b; }
+.payment-icons .fa-cc-paypal { color: #003087; }
+.payment-icons .fa-cc-apple-pay { color: #000; }
+.payment-icons .fa-cc-amazon-pay { color: #ff9900; }
+.payment-icons .fa-cc-stripe { color: #6772e5; }
