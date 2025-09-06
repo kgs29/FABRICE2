@@ -1,39 +1,33 @@
 import { useState } from 'react'
-import Nav from './Comp/Nav'
-import Carousel from './Comp/Carousel'
-import Categorie from './Comp/Categorie.jsx'
-import Supplier from './Comp/Supplier'
-import Footer from './Comp/Footer'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home.jsx'
-import Produit from './pages/Produit.jsx'
+import ProductsPage from './pages/ProductsPage.jsx'
 import Login from './pages/Login.jsx'
 import Register from './pages/Register.jsx'
 import Dashboard from './pages/Dashboard.jsx'
-
-
+import Acheteur from './pages/Acheteur.jsx'
+// import Categories from './pages/Categories.jsx'; // à créer si besoin
+import Fournisseur from './pages/Fournisseur.jsx'; 
+import Contact from './pages/Contact.jsx'; 
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    
-    <>
-    
-    {<BrowserRouter>
-    <Routes>
-    
-    <Route path="/" element={<Home />} />
-    <Route  path='/Home' element={<Home/>}></Route>
-    <Route path='/produit' element={<Produit/>}></Route>
-    <Route path='/register' element={<Register/>}></Route>
-    <Route path='/login' element={<Login/>}></Route>
-    <Route path='/dashboard' element={<Dashboard/>}></Route>
-
-    </Routes>
-    </BrowserRouter> }
-
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/acheteur" element={<Acheteur />} />
+        <Route path="/fournisseur" element={<Fournisseur />} /> 
+        <Route path="/contact" element={<Contact />} /> 
+        {/* <Route path="/categories" element={<Categories />} /> */}
+      </Routes>
+    </BrowserRouter>
   )
 }
 

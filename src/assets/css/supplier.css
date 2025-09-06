@@ -42,6 +42,77 @@
   background: white;
 }
 
+  .supplier-simple-card {
+    background: linear-gradient(135deg, #f8fafc 60%, #e0e7ff 100%);
+    border: 2px solid #6366f1;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(99,102,241,0.08);
+    padding: 24px;
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s;
+  }
+
+  .supplier-simple-card:hover {
+    box-shadow: 0 8px 32px rgba(99,102,241,0.18);
+    border-color: #4f46e5;
+  }
+
+  .supplier-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    border: 2px solid #6366f1;
+  }
+
+  .supplier-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #3730a3;
+    margin-bottom: 8px;
+  }
+
+  .supplier-description {
+    background: #eef2ff;
+    border-radius: 8px;
+    padding: 12px;
+    width: 100%;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+  }
+
+  .supplier-badge {
+    display: inline-block;
+    background: #6366f1;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 2px 8px;
+    margin-right: 8px;
+  }
+
+  .supplier-rating {
+    color: #f59e42;
+    font-weight: 600;
+    margin-right: 8px;
+  }
+
+  .supplier-shipping {
+    color: #2563eb;
+    font-size: 0.95rem;
+    margin-right: 8px;
+  }
+
+  .supplier-desc-text {
+    margin-top: 8px;
+    color: #334155;
+    font-size: 0.98rem;
+  }
 .supplier-card.ai-recommended {
   box-shadow: 0 8px 24px rgba(0, 107, 179, 0.12);
   border-top: 3px solid #3182ce;

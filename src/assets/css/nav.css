@@ -1,3 +1,20 @@
+/* Style pour l'élément actif de la navbar */
+
+.nav-links li.active > a,
+.mobile-menu li.active > a {
+  color: var(--primary-color) !important;
+  font-weight: bold;
+  border-bottom: 3px solid var(--primary-color);
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Supprime le soulignement sur tous les liens de navigation */
+.nav-links a,
+.mobile-menu a {
+  text-decoration: none !important;
+}
 /* Variables */
 :root {
   --primary-color: #FF6A00;

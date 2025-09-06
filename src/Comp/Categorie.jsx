@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import '../assets/css/categories.css';
-
+import Tech1 from '../assets/images/tech1.jpg';
+import art14 from '../assets/images/art14.jpg';
+import art23 from '../assets/images/art23.jpg';
+import art24 from '../assets/images/art24.jpg';
+import art25 from '../assets/images/art25.jpg';
+import art26 from '../assets/images/art26.jpg';
 const ProductsSection = () => {
   const [cart, setCart] = useState([]);
   const [activeCategory, setActiveCategory] = useState('Tous');
@@ -28,7 +33,7 @@ const ProductsSection = () => {
       price: 2199.99,
       originalPrice: 2499.99,
       category: 'Technologie',
-     image: 'https://s.alicdn.com/@sc04/kf/H6ed0d472824449d88a4e227028955ae99.jpg_720x720q50.jpg',
+      image: Tech1,
       rating: 4.8,
       reviews: 1243,
       features: ['4K/120fps', '46 min de vol', 'Triple caméra'],
@@ -37,7 +42,86 @@ const ProductsSection = () => {
       shipping: 'Livraison gratuite',
       delivery: 'Livré demain'
     },
-    // ... Ajouter 49 autres produits
+    // Santé
+    {
+      id: 2,
+      name: 'Purificateur d’air Xiaomi Mi Air Purifier',
+      price: 129.99,
+      originalPrice: 159.99,
+      category: 'Santé',
+      image: art14,
+      rating: 4.6,
+      reviews: 542,
+      features: ['HEPA', 'Connecté', 'Silencieux'],
+      brand: 'Xiaomi',
+      stock: 30,
+      shipping: 'Livraison gratuite',
+      delivery: 'Livré sous 2 jours'
+    },
+    // BTP
+    {
+      id: 3,
+      name: 'Perceuse Bosch Professional GSB 18V',
+      price: 199.99,
+      originalPrice: 249.99,
+      category: 'BTP',
+      image: art23,
+      rating: 4.7,
+      reviews: 321,
+      features: ['18V', 'Sans fil', 'Compact'],
+      brand: 'Bosch',
+      stock: 20,
+      shipping: 'Livraison offerte',
+      delivery: 'Livré sous 3 jours'
+    },
+    // Médical
+    {
+      id: 4,
+      name: 'Thermomètre infrarouge médical',
+      price: 29.99,
+      originalPrice: 39.99,
+      category: 'Médical',
+      image: art24,
+      rating: 4.5,
+      reviews: 210,
+      features: ['Sans contact', 'Rapide', 'Précis'],
+      brand: 'Omron',
+      stock: 50,
+      shipping: 'Livraison rapide',
+      delivery: 'Livré demain'
+    },
+    // Agricole
+    {
+      id: 5,
+      name: 'Tracteur Kubota Série M',
+      price: 15999.99,
+      originalPrice: 17999.99,
+      category: 'Agricole',
+      image: art25,
+      rating: 4.9,
+      reviews: 87,
+      features: ['Diesel', '4 roues motrices', 'Cabine confort'],
+      brand: 'Kubota',
+      stock: 3,
+      shipping: 'Livraison sur devis',
+      delivery: 'Livré sous 7 jours'
+    },
+    // Industriel
+    {
+      id: 6,
+      name: 'Compresseur industriel Atlas Copco',
+      price: 2999.99,
+      originalPrice: 3499.99,
+      category: 'Industriel',
+      image: art26,
+      rating: 4.4,
+      reviews: 54,
+      features: ['Puissant', 'Silencieux', 'Éco-énergétique'],
+      brand: 'Atlas Copco',
+      stock: 8,
+      shipping: 'Livraison offerte',
+      delivery: 'Livré sous 5 jours'
+    }
   ];
 
   // Filtrer les produits par catégorie

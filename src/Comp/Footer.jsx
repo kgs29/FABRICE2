@@ -14,8 +14,17 @@ const Footer = () => {
       <div className="footer-container">
         {/* Colonne 1 - Même structure mais avec les composants d'icônes */}
         <div className="footer-col">
-          <h4>shopping Line</h4>
+          <h4>Shopping Line</h4>
           <p>Le meilleur endroit pour trouver des produits et fournisseurs fiables.</p>
+          <nav className="footer-nav">
+            <ul>
+              <li><a href="/">Accueil</a></li>
+              <li><a href="/categories">Catégories de produit</a></li>
+              <li><a href="/acheteur">Acheteur</a></li>
+              <li><a href="/fournisseur">Fournisseur</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+          </nav>
           <div className="social-links">
             <a aria-label="Facebook" href="#"><FaFacebook /></a>
             <a aria-label="Twitter" href="#"><FaTwitter /></a>

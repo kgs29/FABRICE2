@@ -1,6 +1,6 @@
 
 import React from 'react';
-import SupplierCard from './SupplierCard';
+// import SupplierCard from './SupplierCard';
 import '../assets/css/supplier.css';
 const SuppliersSection = () => {
   // Données simulées (en pratique, viendrait d'une API ou state management)
@@ -29,7 +29,16 @@ const SuppliersSection = () => {
       
       <div className="suppliers-grid">
         {suppliers.map(supplier => (
-          <SupplierCard key={supplier.id} supplier={supplier} />
+          <div key={supplier.id} className="supplier-simple-card">
+            <img src={supplier.image} alt={supplier.name} className="supplier-img" />
+            <h3 className="supplier-title">{supplier.name}</h3>
+            <div className="supplier-description">
+              <span className="supplier-badge">{supplier.badge}</span>
+              <span className="supplier-rating">⭐ {supplier.rating}</span>
+              <span className="supplier-shipping">🚚 {supplier.shipping}</span>
+              <p className="supplier-desc-text">{supplier.description}</p>
+            </div>
+          </div>
         ))}
       </div>
       

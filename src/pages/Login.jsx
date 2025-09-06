@@ -15,7 +15,7 @@ function Login() {
   return (
     <div className="login-container">
       <div className="login-card">
-        <h1>Builder Store connexion</h1>
+        <h1>Store connexion</h1>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Login :</label>

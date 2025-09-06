@@ -1,7 +1,10 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+// Assurez-vous que la route /products pointe vers ProductsPage dans votre configuration de routes
 import { FaUser, FaSearch, FaChevronDown } from 'react-icons/fa';
 import '../assets/css/nav.css'; // Assurez-vous que le chemin est correct
 const Nav = () => {
+  const location = useLocation();
   const [showDropdown, setShowDropdown] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 992);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -45,7 +48,7 @@ const Nav = () => {
           <div className="top-links">
             <a href="#">Aide</a>
             <a href="#">Rejoignez-nous</a>
-            <a href="../login">Mode Fournisseur</a>
+            <Link to="/login">Mode Fournisseur</Link>
           </div>
         </div>
       </div>
@@ -60,19 +63,27 @@ const Nav = () => {
 
             {!isMobile && (
               <ul className="nav-links">
-                <li><a href="../Home">Accueil</a></li>
-                <li 
-                  className="dropdown-trigger" 
+                <li className={location.pathname === '/' ? 'active' : ''}>
+                  <Link to="/" style={{ textDecoration: 'none' }}>Accueil</Link>
+                </li>
+                <li
+                  className={`dropdown-trigger ${location.pathname === '/products' ? 'active' : ''}`}
                   ref={dropdownRef}
                   onClick={() => setShowDropdown(!showDropdown)}
                 >
-                  <a href="../produit" id="produit-link">
-                    Produits <FaChevronDown size={12} />
-                  </a>
+                  <Link to="/products" id="products-link" style={{ textDecoration: 'none' }}>
+                    catégorie de produit <FaChevronDown size={12} />
+                  </Link>
                 </li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Contact</a></li>
+                <li className={location.pathname === '/Acheteur' ? 'active' : ''}>
+                  <Link to="/Acheteur" style={{ textDecoration: 'none' }}>Acheteurs</Link>
+                </li>
+                <li className={location.pathname === '/fournisseur' ? 'active' : ''}>
+                  <Link to="/fournisseur" style={{ textDecoration: 'none' }}>Fournisseurs</Link>
+                </li>
+                <li className={location.pathname === '/contact' ? 'active' : ''}>
+                  <Link to="/contact" style={{ textDecoration: 'none' }}>Contact</Link>
+                </li>
               </ul>
             )}
 
@@ -86,7 +97,9 @@ const Nav = () => {
             <div className="auth-buttons">
               <button className="signup-btn">
                 <FaUser />
-                <span>Connexion</span>
+                <Link to="/login" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <span>Connexion</span>
+                </Link>
               </button>
             </div>
 
@@ -105,25 +118,33 @@ const Nav = () => {
         {isMobile && showMobileMenu && (
           <div className="mobile-menu">
             <ul>
-              <li><a href="#">Accueil</a></li>
-              <li>
+              <li className={location.pathname === '/' ? 'active' : ''}>
+                <Link to="/" style={{ textDecoration: 'none' }}>Accueil</Link>
+              </li>
+              <li className={location.pathname === '/products' ? 'active' : ''}>
                 <a href="#" onClick={(e) => {
                   e.preventDefault();
                   setShowDropdown(!showDropdown);
-                }}>
-                  Produits <FaChevronDown size={12} />
+                }} style={{ textDecoration: 'none' }}>
+                  catégorie de produit<FaChevronDown size={12} />
                 </a>
                 {showDropdown && (
                   <div className="mobile-dropdown">
                     {products.map(product => (
-                      <a key={product.id} href="#">{product.name}</a>
+                      <Link key={product.id} to="/products" style={{ textDecoration: 'none' }}>{product.name}</Link>
                     ))}
                   </div>
                 )}
               </li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">À propos</a></li>
-              <li><a href="#">Contact</a></li>
+              <li className={location.pathname === '/Acheteur' ? 'active' : ''}>
+                <Link to="/Acheteur" style={{ textDecoration: 'none' }}>Acheteurs</Link>
+              </li>
+              <li className={location.pathname === '/fournisseur' ? 'active' : ''}>
+                <Link to="/fournisseur" style={{ textDecoration: 'none' }}>Fournisseurs</Link>
+              </li>
+              <li className={location.pathname === '/contact' ? 'active' : ''}>
+                <Link to="/contact" style={{ textDecoration: 'none' }}>Contact</Link>
+              </li>
             </ul>
           </div>
         )}

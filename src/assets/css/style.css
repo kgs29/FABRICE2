@@ -250,6 +250,120 @@ h3 {
   font-weight: 600;
 }
 
+/* Ajout du style pour le texte défilant promo-marquee */
+.promo-marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  background: var(--primary);
+  color: #fff;
+  padding: 8px 0;
+  font-size: 1.1rem;
+  position: relative;
+  --marquee-speed: 12s; /* Vitesse du défilement, plus petit = plus rapide */
+}
+.promo-marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee var(--marquee-speed) linear infinite;
+}
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Modernisation des cartes produits */
+.modern-product-card {
+  position: relative;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.modern-product-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.16);
+  transform: translateY(-4px) scale(1.03);
+}
+.modern-product-card .product-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f7fa;
+}
+.modern-product-card .product-image img {
+  max-height: 160px;
+  max-width: 90%;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.modern-product-card:hover .product-image img {
+  transform: scale(1.07);
+}
+.modern-product-card .badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #ff9900;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  z-index: 2;
+}
+.modern-product-card .product-price-overlay {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.72);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 8px;
+  z-index: 2;
+}
+.modern-product-card .old-price {
+  color: #ffd700;
+  font-size: 0.95rem;
+  text-decoration: line-through;
+  margin-left: 8px;
+}
+.modern-product-card .product-title {
+  margin: 18px 0 8px 0;
+  font-size: 1.08rem;
+  font-weight: 700;
+  text-align: center;
+  color: #222;
+}
+.modern-product-card .product-meta {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 12px;
+}
+@media (max-width: 700px) {
+  .modern-product-card .product-image {
+    height: 120px;
+  }
+  .modern-product-card .product-image img {
+    max-height: 90px;
+  }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .category-grid {
